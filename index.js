@@ -22,25 +22,48 @@ function() {
 
 // ===== Random Hex gen ========================================================
 
-const randomIndex = (length) => {
- return Math.floor(Math.random() * length)
-}
-
-const randomString = (n) => {
-   let result = ''
-   let pool = "123456789FF"
-
-   for(let i = 0; i < n; i++) {
-     result += pool[randomIndex(pool.length)]
-   }
-
-   return "#" + result
-}
+// const randomIndex = (length) => {
+//  return Math.floor(Math.random() * length)
+// }
+//
+// const randomString = (n) => {
+//    let result = '#'
+//    let pool = "123456789FF"
+//
+//    for(let i = 0; i < n; i++) {
+//      result += pool[randomIndex(pool.length)]
+//    }
+//
+//    return result
+// }
 
 
 
 // ===== Set background ========================================================
 
 
+  let brush
+  let colorpalette = document.getElementsByClassName("colorpalette") // returns array
+  let cell = document.getElementsByClassName("canvas")
 
-})
+
+  for(let i = 0; i < colorpalette.length; i++){
+    colorpalette[i].addEventListener("click", function(){
+      brush = colorpalette[i].id
+      console.log(brush)
+    })
+
+  }
+
+    canvas.addEventListener("click", function(event){
+      event.target.style.backgroundColor = brush
+    })
+
+
+
+
+
+
+
+
+}) // DOMContentLoaded
