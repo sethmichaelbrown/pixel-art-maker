@@ -1,0 +1,32 @@
+body{
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  background-color: #9DB9C6;
+}
+
+.row{
+  grid-column: 2 / 3;
+}
+
+.card{
+  height: 650px;
+  width: 1000px;
+  text-align: center;
+}
+
+.card-title h1{
+  font-family: 'Niramit', sans-serif;
+  font-size: 48px;
+  margin-top: 1%
+}
+
+.palette{
+  float: left;
+  grid-column: 3 / 4;
+  margin-top: 70%;
+}
+
+.btn-large{
+  height: 55px;
+  width: 115px;
+}
